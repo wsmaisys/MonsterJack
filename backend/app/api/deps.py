@@ -39,7 +39,7 @@ async def get_current_user(
     # If no token provided (or demo/local dev), provide or create a default user/workspace
     if not token:
         # Check if default demo user exists
-        stmt = select(User).where(User.email == "demo@relayhub.io")
+        stmt = select(User).where(User.email == "demo@monsterjack.io")
         res = await db.execute(stmt)
         user = res.scalar_one_or_none()
         if not user:
@@ -50,7 +50,7 @@ async def get_current_user(
             await db.refresh(workspace)
 
             user = User(
-                email="demo@relayhub.io",
+                email="demo@monsterjack.io",
                 full_name="Demo User",
                 hashed_password=get_password_hash("demo123"),
                 workspace_id=workspace.id

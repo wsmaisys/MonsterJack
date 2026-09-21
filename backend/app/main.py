@@ -18,7 +18,7 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(
-    title="RelayHub Backend API",
+    title="Monster Jack Backend API",
     description="Multi-Tenant Marketing Automation Platform with Blog & Social Repurposing Engine",
     version="1.0.0",
     lifespan=lifespan
@@ -45,7 +45,7 @@ app.include_router(campaigns_router, prefix="/api/v1")
 async def health_check():
     return {
         "status": "healthy",
-        "service": "RelayHub API",
+        "service": "Monster Jack API",
         "ai_provider": settings.AI_PROVIDER,
         "environment": settings.ENVIRONMENT
     }

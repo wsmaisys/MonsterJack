@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RelayHub | Multi-Tenant Marketing & Blog Automation Platform",
+  title: "Monster Jack | Multi-Tenant Marketing & Blog Automation Platform",
   description: "AI-assisted content engine to write SEO blog articles, publish to personal and business websites, and relay to LinkedIn, X, and newsletters.",
 };
 

@@ -49,5 +49,5 @@ class ImageGeneratorService:
             "success": True,
             "image_url": fallback_url,
             "prompt": prompt,
-            "note": "Generated via RelayHub Vision (configure GEMINI_API_KEY for live Imagen calls)"
+            "note": "Generated via Monster Jack Vision (configure GEMINI_API_KEY for live Imagen calls)"
         }

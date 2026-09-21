@@ -1,6 +1,6 @@
-# 🚀 RelayHub: Multi-Tenant Marketing & Blog Automation Platform
+# 🚀 Monster Jack: Multi-Tenant Marketing & Blog Automation Platform
 
-RelayHub is an all-in-one AI marketing automation platform designed for modern founders, creators, and marketing teams. It combines **personal & business website blog publishing (WordPress REST API + Webhooks)** with **multi-channel social media scheduling (LinkedIn, X, Instagram)** and **email newsletter distribution** powered by a unified 1-click AI repurposing engine.
+Monster Jack is an all-in-one AI marketing automation platform designed for modern founders, creators, and marketing teams. It combines **personal & business website blog publishing (WordPress REST API + Webhooks)** with **multi-channel social media scheduling (LinkedIn, X, Instagram)** and **email newsletter distribution** powered by a unified 1-click AI repurposing engine.
 
 ---
 
@@ -31,7 +31,7 @@ RelayHub is an all-in-one AI marketing automation platform designed for modern f
 ## 🏗️ Architecture Overview
 
 ```text
-                                  RELAYHUB
+                                MONSTER JACK
                                      │
       ┌──────────────────────────────┼──────────────────────────────┐
       │                              │                              │
@@ -98,7 +98,7 @@ npm install
 # Start Next.js development server
 npm run dev
 ```
-Open `http://localhost:3000` to explore the RelayHub Dashboard.
+Open `http://localhost:3000` to explore the Monster Jack Dashboard.
 
 ### 5. Running with Docker Compose
 To run PostgreSQL, Redis, FastAPI Backend, and Next.js together:
@@ -114,9 +114,9 @@ docker-compose up --build
 1. Log into your WordPress admin dashboard (`/wp-admin`).
 2. Go to **Users > Profile**.
 3. Scroll down to **Application Passwords**.
-4. Enter an application name (e.g., `RelayHub`) and click **Add New Application Password**.
+4. Enter an application name (e.g., `Monster Jack`) and click **Add New Application Password**.
 5. Copy the generated 24-character password.
-6. In RelayHub > **Website Blogs (CMS)** > Click **Connect New Blog**:
+6. In Monster Jack > **Website Blogs (CMS)** > Click **Connect New Blog**:
    * CMS Type: `WordPress (REST API)`
    * Website URL: `https://yourdomain.com`
    * Username: Your WP username
@@ -124,11 +124,11 @@ docker-compose up --build
 7. Click **Save & Test Connection**.
 
 ### Connecting Custom Sites (Next.js / Astro / Headless)
-1. In RelayHub > **Website Blogs (CMS)** > Click **Connect New Blog**:
+1. In Monster Jack > **Website Blogs (CMS)** > Click **Connect New Blog**:
    * CMS Type: `Custom Webhook`
    * Endpoint URL: `https://yourdomain.com/api/revalidate-blog`
    * Secret Key: An optional shared HMAC secret.
-2. RelayHub sends a JSON payload on publication containing `{ event: "blog_post.published", post: { title, slug, content, tags, ... } }` and an `X-RelayHub-Signature` header.
+2. Monster Jack sends a JSON payload on publication containing `{ event: "blog_post.published", post: { title, slug, content, tags, ... } }` and an `X-MonsterJack-Signature` header.
 
 ---
 
@@ -137,7 +137,7 @@ docker-compose up --build
 See [.env.example](.env.example):
 ```env
 ENVIRONMENT=development
-DATABASE_URL=sqlite+aiosqlite:///./relay_hub.db
+DATABASE_URL=sqlite+aiosqlite:///./monster_jack.db
 REDIS_URL=redis://localhost:6379/0
 
 # AI Configuration

@@ -16,7 +16,7 @@ import uuid
 @pytest.mark.asyncio
 async def test_auth_and_blog_flow():
     await init_db()
-    test_email = f"test_{uuid.uuid4().hex[:6]}@relayhubdemo.com"
+    test_email = f"test_{uuid.uuid4().hex[:6]}@monsterjackdemo.com"
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as ac:
         # 1. Register
         reg_res = await ac.post("/api/v1/auth/register", json={

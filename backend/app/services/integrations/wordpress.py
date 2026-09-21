@@ -21,7 +21,7 @@ class WordPressConnector(BaseBlogConnector):
         return {
             "Authorization": f"Basic {token}",
             "Content-Type": "application/json",
-            "User-Agent": "RelayHub-Marketing-Hub/1.0"
+            "User-Agent": "MonsterJack-Marketing-Hub/1.0"
         }
 
     async def test_connection(self) -> Dict[str, Any]:

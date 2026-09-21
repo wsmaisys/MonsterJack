@@ -61,7 +61,7 @@ interface SocialPost {
   scheduled_for?: string;
 }
 
-export default function RelayHubDashboard() {
+export default function MonsterJackDashboard() {
   const [activeTab, setActiveTab] = useState<"overview" | "studio" | "blogs" | "social" | "newsletters" | "integrations">("overview");
 
   // Multi-tenant workspaces
@@ -117,7 +117,7 @@ Own your audience, automate the distribution, and let your insights compound ove
     email_subject: string;
     email_content: string;
   }>({
-    linkedin: `🚀 The biggest mistake founders and creators make in 2026: building on rented land.\n\nWhen algorithms shift, your organic reach disappears.\n\nThe fix? Make your personal website blog your *content anchor*.\n\nHere's our 4-step framework:\n1. Publish long-form thoughts on your own domain\n2. Turn key lessons into high-signal LinkedIn insights\n3. Extract tactical threads for X\n4. Dispatch a value digest to your email list\n\nCreate once. Repurpose everywhere. Own your distribution.\n\nFull breakdown live on our blog now (link in comments) 👇\n\n#ContentMarketing #PersonalBranding #GrowthStrategy #RelayHub`,
+    linkedin: `🚀 The biggest mistake founders and creators make in 2026: building on rented land.\n\nWhen algorithms shift, your organic reach disappears.\n\nThe fix? Make your personal website blog your *content anchor*.\n\nHere's our 4-step framework:\n1. Publish long-form thoughts on your own domain\n2. Turn key lessons into high-signal LinkedIn insights\n3. Extract tactical threads for X\n4. Dispatch a value digest to your email list\n\nCreate once. Repurpose everywhere. Own your distribution.\n\nFull breakdown live on our blog now (link in comments) 👇\n\n#ContentMarketing #PersonalBranding #GrowthStrategy #MonsterJack`,
     twitter: `Most creators publish on LinkedIn & X first, then forget their own website.\n\nFlip the script:\n\n1. Write 1 anchor post on your blog\n2. Repurpose into punchy threads\n3. Drive readers back to your domain\n\nOwn your audience. 🧵👇`,
     instagram: `Your website blog is digital real estate you actually own. 🏡 Stop relying 100% on algorithm luck! Swipe for the 4-step repurposing formula 👉\n.\n.\n#marketingtips #founders #growthhacks #contentstrategy`,
     email_subject: "Why personal blogs are winning again in 2026",
@@ -139,7 +139,7 @@ Own your audience, automate the distribution, and let your insights compound ove
       id: 2,
       name: "Company Website (Next.js)",
       cms_type: "webhook",
-      site_url: "https://relayhub-demo.com/api/revalidate-blog",
+      site_url: "https://monsterjack-demo.com/api/revalidate-blog",
       is_active: true,
       last_synced_at: "5 mins ago"
     }
@@ -238,7 +238,7 @@ Own your audience, automate the distribution, and let your insights compound ove
         created_at: new Date().toISOString(),
         content: `## Why ${topic} Matters\n\nIn modern marketing, having an owned presence on your personal or business website is non-negotiable.\n\n### Strategic Pillars\n1. **Long-Term Compound Value**: Blog articles continue acquiring backlinks and search rankings months after publication.\n2. **High-Velocity Repurposing**: Every section of your blog can be atomized into social media updates.\n\n## Action Plan\nStart with a deep-dive post, publish to your blog CMS, and automatically distribute across social channels.`
       });
-      setStatusMessage("✅ AI generated post loaded via RelayHub local engine!");
+      setStatusMessage("✅ AI generated post loaded via Monster Jack local engine!");
     } finally {
       setIsGenerating(false);
     }
@@ -352,7 +352,7 @@ Own your audience, automate the distribution, and let your insights compound ove
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-bold text-lg tracking-tight gradient-text">RelayHub</h1>
+              <h1 className="font-bold text-lg tracking-tight gradient-text">Monster Jack</h1>
               <span className="text-[10px] uppercase font-semibold px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
                 SaaS Hub
               </span>

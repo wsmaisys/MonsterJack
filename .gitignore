@@ -52,6 +52,7 @@ venv.bak/
 backend/*.db
 reach_ai.db
 relay_hub.db
+monster_jack.db
 
 # Next.js & Frontend build outputs
 .next/

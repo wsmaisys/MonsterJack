@@ -30,13 +30,13 @@ class WebhookConnector(BaseBlogConnector):
         payload = {
             "event": "ping",
             "timestamp": datetime.utcnow().isoformat(),
-            "source": "RelayHub"
+            "source": "MonsterJack"
         }
         body = json.dumps(payload)
         headers = {
             "Content-Type": "application/json",
-            "X-RelayHub-Event": "ping",
-            "X-RelayHub-Signature": self._sign_payload(body)
+            "X-MonsterJack-Event": "ping",
+            "X-MonsterJack-Signature": self._sign_payload(body)
         }
 
         async with httpx.AsyncClient(timeout=10.0) as client:
@@ -87,8 +87,8 @@ class WebhookConnector(BaseBlogConnector):
         body = json.dumps(payload)
         headers = {
             "Content-Type": "application/json",
-            "X-RelayHub-Event": payload["event"],
-            "X-RelayHub-Signature": self._sign_payload(body)
+            "X-MonsterJack-Event": payload["event"],
+            "X-MonsterJack-Signature": self._sign_payload(body)
         }
 
         async with httpx.AsyncClient(timeout=20.0) as client:
